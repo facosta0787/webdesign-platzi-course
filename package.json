@@ -1,0 +1,19 @@
+{
+  "name": "desarrollo-web",
+  "version": "1.0.0",
+  "description": "Guitarras Invie",
+  "main": "index.js",
+  "scripts": {
+    "css": "gulp",
+    "css:watch": "gulp sass:watch"
+  },
+  "author": "facosta0787",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.2"
+  }
+}

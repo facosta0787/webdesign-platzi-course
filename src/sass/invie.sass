@@ -1,0 +1,371 @@
+@import _fonts
+@import _variables
+
+html
+  height: 100%
+
+body
+  margin: 0
+  font-family: $font
+  height: 100%
+  display: flex
+  flex-direction: column
+
+.content
+  flex: 1 0 auto
+
+.hide
+  display: none !important
+
+table
+  width: 100%
+
+th
+  background-color: $footer-background
+  color: white
+  padding: 10px 20px
+  text-align: left
+
+td
+  padding: 20px 10px
+  font-size: 12px
+
+table, td, th
+  border: 1px solid $footer-background
+  border-collapse: collapse
+
+input, textarea
+  outline: 0
+  &:focus
+    background: lightgray
+
+.contenedor
+  max-width: $web-width
+  margin: auto
+  position: relative
+
+.background
+  background-image: url('../images/background.png')
+  background-size: cover
+
+.header
+  position: relative
+
+.titulo
+  margin-bottom: 0
+  margin-top: 70px
+  font-family: $font-title
+  font-size: 70px
+  span
+    text-decoration: underline
+
+.title-a
+  margin-top: 0
+  font-size: 24px
+
+.guitarras
+  color: $texts
+  margin-bottom: 60px
+  h2
+    font-family: $font-title
+    font-size: 35px
+
+.guitarra
+  border-radius: 8px
+  margin: 95px 10px 40px 10px
+  padding: 10px
+  // overflow: hidden
+  border: 1px solid $texts
+  ol
+    padding: 0
+
+.guitarra.b
+  height: 190px
+
+.right
+  float: right
+  position: relative
+  top: -127px
+
+.left
+  float: left
+  position: relative
+
+.title-b
+  font-size: 50px
+  margin-bottom: 20px
+
+.portada
+  padding: 20px
+  color: $white
+  height: 500px
+
+.button
+  margin-bottom: 70px
+  border-radius: 12px
+  padding: 7px 12px
+  background: linear-gradient(to left,#fe344e,#ff7250)
+  color: white
+  border: none
+  font-size: 18px
+  cursor: pointer
+  text-decoration: none
+
+.menu
+  position: absolute
+  right: 0
+  font-size: 16px
+  display: inline-block
+  padding-top: 20px
+  li
+    display: inline-block
+    margin-left: 30px
+    &::before
+      content: '∘ '
+      font-size: 16px
+      line-height: 20px
+      color: white
+  a
+    color: white
+    text-decoration: none
+
+.logotipo
+  display: inline-block
+  margin-left: 0
+
+.contenedor-guitarra-a
+  padding-left: 20px
+
+.contenedor-guitarra-b
+  margin-top: 100px
+  margin-left: 370px
+  position: relative
+  bottom: 90px
+
+.footer
+  background-color: $footer-background
+  padding: 50px 10px
+  .contenedor
+    display: flex
+    justify-content: space-between
+
+.contacto
+  display: flex
+  width: 300px
+  height: 200px
+  flex-wrap: wrap
+  align-items: center
+  font-size: 14px
+  img
+    display: block
+  strong
+    display: block
+  a
+    margin: 10px 10px 10px 0px
+    color: white
+    text-decoration: none
+
+.formulario
+  display: flex
+  width: 400px
+  color: white
+  label
+    margin-bottom: 10px
+    font-size: 12px
+
+.sexo
+  margin-top: 10px
+
+.sexo, .intereses
+  margin-bottom: 10px
+
+.col1, .col2
+  display: flex
+  flex-direction: column
+
+.col1
+  margin-right: 15px
+
+.col2
+  align-items: flex-start
+  .button
+    margin-top: 15px
+    font-size: 14px
+
+.intereses
+  label
+    font-size: 12px
+
+.tabla
+  margin: 50px 0
+
+.video-demo
+  max-width: 500px
+  margin: 0 auto
+  border: 1px solid #3c5b6e
+
+$tablet: "screen and (max-width: 800px)"
+$tablet2: "screen and (max-width: 767px)"
+$movile: "screen and (max-width: 650px)"
+$phone: "screen and (max-width: 500px)"
+
+@media #{$tablet}
+  .titulo
+    font-size: 45px
+    margin-top: 30px
+  .title-a
+    font-size: 18px
+  .portada
+    height: auto
+    .button
+      margin-bottom: 30px
+      display: inline-block
+
+  .guitarras
+    text-align: center
+  .right, .left
+    float: none
+    position: static
+  .title-b
+    margin: 0
+  .guitarra
+    li
+      list-style: none
+  .guitarra.b
+    height: auto
+  .contenedor-guitarra-a
+    padding: 0
+  .contenedor-guitarra-b
+    margin: 0
+    position: static
+
+  .tabla
+    margin: 50px 10px
+    .contenedor
+      overflow: auto
+      border: 1px solid $texts
+
+@media #{$tablet2}
+  .footer
+    .contenedor
+      display: block
+  .contacto
+    margin: 0 auto
+  .formulario
+    width: 300px
+    display: block
+    margin: 0 auto
+  .intereses
+    label
+      font-size: 16px
+      display: block
+      .col1
+        margin: 0
+  input[type="text"],input[type="email"]
+    padding: 5px
+    font-size: 16px
+  input[type="radio"],input[type="checkbox"]
+    zoom: 1.5
+  textarea
+    width: 100%
+
+@media #{$movile}
+  .header
+    text-align: center
+  .logotipo
+    margin: 0
+  .menu
+    position: static
+    display: block
+    text-align: center
+    li
+      &:first-child
+        margin: 0
+    ul
+      padding: 0
+  .guitarra
+    margin: 30px 10px 40px 10px
+
+$fondo-menu: #ff3c58
+
+@media #{$phone}
+  .precios
+    .header
+      .logotipo
+        margin: 50px 0
+  .portada
+    .button
+      display: block
+    text-align: center
+    .contenedor
+      position: static
+  .header
+    position: static
+    .contenedor
+      position: static
+  .titulo
+    font-size: 30px
+  .title-a
+    font-size: 16px
+  .menu
+    background: rgba($fondo-menu,0.8)
+    width: 100%
+    position: fixed
+    left: -100%
+    top: 0
+    bottom: 0
+    right: 0
+    z-index: 2
+    display: flex
+    align-items: center
+    transition: .3s
+    ul
+      flex: 1
+    li
+      display: block
+      margin: 0
+      padding: 8px 0
+      border-bottom: 1px solid white
+      &:first-child
+        border-top: 1px solid white
+      &::before
+        display: none
+  .menu.active
+    left: 0
+  .guitarra
+    img
+      width: 200px
+  .title-b
+    font-size: 30px
+  .video-demo
+    margin: 0 10px
+  .col2
+    align-items: stretch
+
+.burguer-button
+  color: white
+  cursor: pointer
+  display: inline-block
+  text-align: center
+  position: fixed
+  left: 20px
+  top: 20px
+  z-index: 3
+  width: 40px
+  height: 40px
+  line-height: 40px
+  border-radius: 50%
+  background-color: #395667
+
+.video-responsive-contenedor
+  position: relative
+  padding-top: 56.25%
+
+.video-responsive-src
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  width: 100%
+  height: 100%
